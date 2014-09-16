@@ -16,20 +16,27 @@ set timeout           = 10  # mutt 'presses' (like) a key for you (while you're 
 set header_cache      = ~/.cache/mutt
 set mark_old          = no
 set net_inc           = 5 # Display download progress every 5K 
-set resolve           = no
 unset imap_passive
+unset resolve
 
 # Looks
 set markers           = no # don't put '+' at the beginning of wrapped lines
 set pager_index_lines = 5 # how large is the index window?
 set sort              = 'reverse-threads'
 set sort_aux          = 'last-date-received'
+set pager_index_lines = 10
+# set arrow_cursor    = yes
 
 # Editor
 set editor            = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp"'
 mailboxes             = +INBOX= [Gmail]/Drafts=[Gmail]/'Sent Mail'=[Gmail]/Spam=[Gmail]/Trash
 
 set beep_new # beep on new messages in the mailboxes
+
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager [ previous-unread
+bind pager ] next-unread
 
 bind editor <space> noop
 macro index S "<save-message>+gmail/spam<enter>"  "mark message as spam"
@@ -56,23 +63,25 @@ unignore x-mailing-list: posted-to:
 unignore x-mailer:
 
 color attachment color221  default
-color error      color124  default
+color error      color167  default
 color indicator  color253  color235
 color markers    yellow    default
 color message    yellow    default
 color normal     color245  default
-color search     color48   color240 # how to hilite search patterns in the pager
-color status     color110  color236  # top bar
+color search     color48   color240                 # how to hightlight search patterns in the pager
+color status     color110  color236                 # top bar
 color tilde      color245  default
+mono  indicator  reverse
 
 # Index
-color tree       color213  default                            # arrow in threads
-color index      color222  default  "~A"                      # message to myself
-color index      color139  default  "~N"                      # message to myself
-color index      color110  default  "~T"                      # message to myself
-color index      color167  default  "~="                      # message to myself
-color index      color235  default  "~D(!~p|~p)"              # deleted
+color tree       color213  default                  # arrow in threads
+color index      color222  default  "~A"            # message to myself
+color index      color220  default  "~N"            # message to myself
+color index      color110  default  "~T"            # message to myself
+color index      color167  default  "~="            # message to myself
+color index      color235  default  "~D(!~p|~p)"    # deleted
 color index      color167  default  '~s goaccess'
+color index      color161  default  '~N~s goaccess'
 
 # Header
 color header     color110  default  "^From"
