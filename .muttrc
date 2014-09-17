@@ -65,8 +65,8 @@ unignore x-mailer:
 color attachment color221  default
 color error      color167  default
 color indicator  color253  color235
-color markers    yellow    default
-color message    yellow    default
+color markers    color221  default
+color message    color221  default
 color normal     color245  default
 color search     color48   color240                 # how to hightlight search patterns in the pager
 color status     color110  color236                 # top bar
