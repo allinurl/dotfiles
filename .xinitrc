@@ -19,7 +19,8 @@ xset +fp ~/.fonts
 xset +fp /usr/share/fonts/local &
 fc-cache -fv
 xset fp rehash &
-xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 50 60 256
+# PC dependant
+# xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 50 60 256
 synclient RTCornerButton=2
 sh ~/.fehbg &
 
