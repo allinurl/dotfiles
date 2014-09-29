@@ -56,6 +56,9 @@ set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
 " \p = Runs PHP lint checker on current file
 map <leader>p :! php -l %<CR>
 
+" NERDTree settings
+nnoremap <leader>n :NERDTreeToggle<CR>
+
 function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "")
     return curdir
