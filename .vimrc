@@ -40,6 +40,9 @@ ca tn tabnew
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
 
+" Toggle and untoggle spell checking
+map <leader>s :setlocal spell!<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
