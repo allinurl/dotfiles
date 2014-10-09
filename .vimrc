@@ -34,8 +34,15 @@ colorscheme hybrid
 " Eliminating delays on ESC in vim
 set timeoutlen=1000 ttimeoutlen=0
 
-" shortcut tabnew
-ca tn tabnew
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
