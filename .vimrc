@@ -49,6 +49,7 @@ nnoremap <leader>i :set list!<cr>
 
 " Toggle and untoggle spell checking
 map <leader>s :setlocal spell!<cr>
+map <leader>s? z=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
