@@ -65,10 +65,20 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
 
 "autocmd BufRead,BufNewFile * syn match parens /[(){}]/ | hi parens ctermfg=cyan
 
+" Auto reload ~/.vimrc file upon saving
+autocmd BufWritePost .vimrc source %
+
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
 set statusline+=\ \ \ [%{&ff}/%Y] 
 set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
 set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+
+function! Browser ()
+  let line = getline (".")
+  let line = matchstr (line, "\%(http://\|www\.\)[^ ,;\t]*")
+  exec "!chromium ".line
+endfunction
+map <Leader>o :call Browser ()<CR>
 
 " \p = Runs PHP lint checker on current file
 map <leader>p :! php -l %<CR>
