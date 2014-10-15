@@ -47,6 +47,9 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
 
+" Toggle show/hide numbers 
+nnoremap <leader>n :set num!<cr>
+
 " Toggle and untoggle spell checking
 map <leader>s :setlocal spell!<cr>
 map <leader>s? z=
