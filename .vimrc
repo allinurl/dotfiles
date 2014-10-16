@@ -47,7 +47,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
 
-" Toggle show/hide numbers 
+" Toggle show/hide numbers
 nnoremap <leader>n :set num!<cr>
 
 " Toggle and untoggle spell checking
@@ -60,7 +60,7 @@ map <leader>s? z=
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup         " do not keep a backup file
 set noswapfile
-set nowritebackup 
+set nowritebackup
 
 set directory=~/.vim/.tmp,~/tmp,/tmp
                                 " store swap files in one of these directories
@@ -71,9 +71,9 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
 " Auto reload ~/.vimrc file upon saving
 autocmd BufWritePost .vimrc source %
 
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
-set statusline+=\ \ \ [%{&ff}/%Y] 
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
+set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \
+set statusline+=\ \ \ [%{&ff}/%Y]
+set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
 set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
 
 " \p = Runs PHP lint checker on current file
@@ -115,7 +115,7 @@ fun! StripTrailingWhitespace()
     %s/\s\+$//e
 endfun
 
-set encoding=utf-8                                  
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
