@@ -7,7 +7,7 @@ set shiftwidth=2
 " Use spaces instead of tabs
 set expandtab
 
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 set hlsearch         " highlight searches
 set incsearch        " do incremental searching
 set listchars=tab:>-
