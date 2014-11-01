@@ -31,6 +31,8 @@ let g:loaded_matchparen= 1
 set t_Co=256
 colorscheme hybrid
 
+compiler gcc
+
 " Eliminating delays on ESC in vim
 set timeoutlen=1000 ttimeoutlen=0
 
