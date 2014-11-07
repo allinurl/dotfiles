@@ -33,6 +33,9 @@ colorscheme hybrid
 
 compiler gcc
 
+" redraw only when we need to
+set lazyredraw
+
 " Eliminating delays on ESC in vim
 set timeoutlen=1000 ttimeoutlen=0
 
