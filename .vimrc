@@ -29,7 +29,7 @@ set wildmode=list:longest,full  " full completion options
 
 let g:loaded_matchparen= 1
 set t_Co=256
-colorscheme hybrid
+colorscheme 256_redblack
 
 compiler gcc
 
