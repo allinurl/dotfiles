@@ -33,6 +33,9 @@ colorscheme 256_redblack
 
 compiler gcc
 
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
 " redraw only when we need to
 set lazyredraw
 
