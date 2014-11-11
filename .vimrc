@@ -67,6 +67,11 @@ nnoremap <leader>n :set num!<cr>
 map <leader>s :setlocal spell!<cr>
 map <leader>s? z=
 
+
+set foldenable   " enable folding
+" space open/closes folds
+nnoremap <space> za
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
