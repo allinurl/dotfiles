@@ -71,6 +71,7 @@ map <leader>s? z=
 set foldenable   " enable folding
 " space open/closes folds
 nnoremap <space> za
+set foldlevelstart=10   " open most folds by default
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
