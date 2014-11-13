@@ -72,6 +72,7 @@ set foldenable   " enable folding
 " space open/closes folds
 nnoremap <space> za
 set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " 10 nested fold max
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
