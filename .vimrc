@@ -68,11 +68,12 @@ map <leader>s :setlocal spell!<cr>
 map <leader>s? z=
 
 
+"folding settings
 set foldenable   " enable folding
-" space open/closes folds
-nnoremap <space> za
-set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
