@@ -136,6 +136,13 @@ fun! StripTrailingWhitespace()
     %s/\s\+$//e
 endfun
 
+" Strip all leading > with only one occurrence
+" helpful when replying emails with multiple quote levels
+map <leader>o :call OneLevelReply()<CR>
+fun! OneLevelReply()
+  execute '%s/^\W*/> /g'
+endfun
+
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
