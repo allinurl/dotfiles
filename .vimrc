@@ -83,19 +83,24 @@ set nobackup         " do not keep a backup file
 set noswapfile
 set nowritebackup
 
+" store swap files in one of these directories
+" (in case swapfile is ever turned on)
 set directory=~/.vim/.tmp,~/tmp,/tmp
-                                " store swap files in one of these directories
-                                " (in case swapfile is ever turned on)
-
-"autocmd BufRead,BufNewFile * syn match parens /[(){}]/ | hi parens ctermfg=cyan
 
 " Auto reload ~/.vimrc file upon saving
 autocmd BufWritePost .vimrc source %
 
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \
-set statusline+=\ \ \ [%{&ff}/%Y]
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\
-set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
+set statusline=
+set statusline +=*\ %n\ %*                              " buffer number
+set statusline +=*%{&ff}%*                              " file format
+set statusline +=*%y%*                                  " file type
+                                                          " set statusline +=%4*\ %<%F%* " full path
+set statusline +=*%m\ %*                                " modified flag
+set statusline +=*%20.30(%{hostname()}:%{CurDir()}%)/%t%*
+set statusline +=*%=%5l%*                               " current line
+set statusline +=*/%LL%*                                " total lines
+set statusline +=*%4vC\ %*                              " virtual column number
+set statusline +=*0x%04B\ %*                            " character under cursor
 
 " \p = Runs PHP lint checker on current file
 map <leader>p :! php -l %<CR>
@@ -134,13 +139,6 @@ fun! StripTrailingWhitespace()
         return
     endif
     %s/\s\+$//e
-endfun
-
-" Strip all leading > with only one occurrence
-" helpful when replying emails with multiple quote levels
-map <leader>o :call OneLevelReply()<CR>
-fun! OneLevelReply()
-  execute '%s/^\W*/> /g'
 endfun
 
 set encoding=utf-8
