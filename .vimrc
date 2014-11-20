@@ -122,9 +122,9 @@ endfunction
 map <leader>g :call IncludeGuard()<CR>
 fun! IncludeGuard()
    let basename = substitute(bufname(""), '.*/', '', '')
-   let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
-   call append(0, "#ifndef " . guard)
-   call append(1, "#define " . guard)
+   let guard = substitute(toupper(basename), '\.', '_', "H")
+   call append(0, "#ifndef " . guard . "_INCLUDED")
+   call append(1, "#define " . guard . "_INCLUDED")
    call append( line("$"), "#endif // for #ifndef " . guard)
 endfun
 
