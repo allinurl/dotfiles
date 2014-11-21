@@ -31,6 +31,11 @@ let g:loaded_matchparen= 1
 set t_Co=256
 colorscheme 256_redblack
 
+" CTRL+P
+" cd ~/.vim; git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Compiler in use
 compiler gcc
 
 " turn off search highlight
@@ -63,7 +68,6 @@ nnoremap <leader>n :set num!<cr>
 " Toggle and untoggle spell checking
 map <leader>s :setlocal spell!<cr>
 map <leader>s? z=
-
 
 "folding settings
 set foldenable   " enable folding
