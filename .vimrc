@@ -1,30 +1,28 @@
 syntax on
-set nocompatible    " use vim defaults
-set ls=2            " allways show status line
+set nocompatible                " Use vim defaults
+set ls=2                        " Always show status line
 
 set tabstop=2
 set shiftwidth=2
-" Use spaces instead of tabs
 set expandtab
 
-" set clipboard=unnamedplus
-set hlsearch         " highlight searches
-set incsearch        " do incremental searching
+set hlsearch                    " Highlight searches
+set incsearch                   " Do incremental searching
 set listchars=tab:>-
-set nomodeline       " disable mode lines (security measure)
-set novisualbell     " turn off visual bell
+set nomodeline                  " Disable mode lines (security measure)
+set novisualbell                " Turn off visual bell
 set nowrap
-set number           " show line numbers
-set ruler            " show the cursor position all the time
-set scrolloff=3      " keep 3 lines when scrolling
-set shortmess+=I                " hide the launch screen
-set showcmd          " display incomplete commands
-set showmode         " always show what mode we're currently editing in
+set number                      " Show line numbers
+set ruler                       " Show the cursor position all the time
+set scrolloff=3                 " Keep 3 lines when scrolling
+set shortmess+=I                " Hide the launch screen
+set showcmd                     " Display incomplete commands
+set showmode                    " Always show what mode we're currently editing in
 set tabpagemax=50
-set title            " make your xterm inherit the title from Vim
-set ttyfast          " don't lag…
-set visualbell t_vb= " turn off error beep/flash
-set wildmenu         " enhanced tab-completion shows all matching cmds in a popup menu
+set title                       " Make your xterm inherit the title from Vim
+set ttyfast                     " Don't lag…
+set visualbell t_vb=            " Turn off error beep/flash
+set wildmenu                    " Enhanced tab-completion shows all matching cmds in a popup menu
 set wildmode=list:longest,full  " full completion options
 
 let g:loaded_matchparen= 1
@@ -91,6 +89,7 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
 " Auto reload ~/.vimrc file upon saving
 autocmd BufWritePost .vimrc source %
 
+" Status line
 set statusline=
 set statusline +=*\ %n\ %*                              " buffer number
 set statusline +=*%{&ff}%*                              " file format
