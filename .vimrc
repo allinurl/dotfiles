@@ -121,6 +121,12 @@ function! HasPaste()
     endif
 endfunction
 
+" \o remove reply indent levels
+map <leader>o :call StripReply()<CR>
+fun! StripReply()
+  execute '%s/^\W*/> /g'
+endfun
+
 " \g generates the header guard
 map <leader>g :call IncludeGuard()<CR>
 fun! IncludeGuard()
