@@ -16,6 +16,7 @@ set timeout           = 10  # mutt 'presses' (like) a key for you (while you're 
 set header_cache      = ~/.cache/mutt
 set mark_old          = no
 set net_inc           = 5 # Display download progress every 5K 
+set quit              = ask-yes
 unset imap_passive
 unset resolve
 
