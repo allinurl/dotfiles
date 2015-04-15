@@ -50,7 +50,7 @@ disk(){
 }
 
 mem(){
-  mem=`free -m | awk '/Mem/ {printf "%d MB/%d MB\n", $3 / 1024.0, $2 / 1024.0 }'`
+  mem=`free | awk '/Mem/ {printf "%d MB/%d MB\n", $3 / 1024.0, $2 / 1024.0 }'`
   echo -e "\x02 \x01$mem"
 }
 
