@@ -168,4 +168,4 @@ if &term =~ '^screen'
 endif
 
 " Indentation
-autocmd BufRead,BufNewFile   *.php,*.js,*.volt,*.html,*.htm,*.ini set noexpandtab shiftwidth=4 tabstop=4
+autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini set noexpandtab shiftwidth=4 tabstop=4
