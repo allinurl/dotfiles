@@ -180,4 +180,4 @@ fun! SuperTabToggle()
 endfun
 
 " Indentation
-autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini set noexpandtab shiftwidth=4 tabstop=4
+autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini,*.css set noexpandtab shiftwidth=4 tabstop=4
