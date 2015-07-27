@@ -167,5 +167,17 @@ if &term =~ '^screen'
   execute "set <xLeft>=\e[1;*D"
 endif
 
+" let b:SuperTabDisabled = 0
+map <leader>t :call SuperTabToggle()<CR>
+let b:SuperTabDisabled = 0
+fun! SuperTabToggle()
+	if b:SuperTabDisabled == 0
+		let b:SuperTabDisabled = 1
+	else
+		let b:SuperTabDisabled = 0
+	endif	
+	echo "SuperTab: " b:SuperTabDisabled
+endfun
+
 " Indentation
 autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini set noexpandtab shiftwidth=4 tabstop=4
