@@ -91,35 +91,19 @@ autocmd BufWritePost .vimrc source %
 
 " Status line
 set statusline=
-set statusline +=*\ %n\ %*                              " buffer number
-set statusline +=*%{&ff}%*                              " file format
-set statusline +=*%y%*                                  " file type
-                                                          " set statusline +=%4*\ %<%F%* " full path
-set statusline +=*%m\ %*                                " modified flag
-set statusline +=*%20.30(%{hostname()}:%{CurDir()}%)/%t%*
-set statusline +=*%=%5l%*                               " current line
-set statusline +=*/%LL%*                                " total lines
-set statusline +=*%4vC\ %*                              " virtual column number
-set statusline +=*0x%04B\ %*                            " character under cursor
+set statusline +=*\ %n\ %*         " buffer number
+set statusline +=%<%f\             " Filename
+set statusline +=%w%h%m%r          " Options
+set statusline +=\[%{&ff}/%Y]      " filetype
+set statusline +=\ [%{hostname()}] " hostname
+set statusline +=\ [%{getcwd()}]   " current dir
+set statusline +=*%=%5l%*          " current line
+set statusline +=*/%LL%*           " total lines
+set statusline +=*%4vC\ %*         " virtual column number
+set statusline +=*0x%04B\ %*       " character under cursor
 
 " \p = Runs PHP lint checker on current file
 map <leader>p :! php -l %<CR>
-
-" NERDTree settings
-nnoremap <leader>n :NERDTreeToggle<CR>
-
-function! CurDir()
-    let curdir = substitute(getcwd(), $HOME, "~", "")
-    return curdir
-endfunction
-
-function! HasPaste()
-    if &paste
-        return '[PASTE]'
-    else
-        return ''
-    endif
-endfunction
 
 " \o remove reply indent levels
 map <leader>o :call StripReply()<CR>
