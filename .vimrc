@@ -92,11 +92,11 @@ autocmd BufWritePost .vimrc source %
 " Status line
 set statusline=
 set statusline +=*\ %n\ %*         " buffer number
-set statusline +=%<%f\             " Filename
 set statusline +=%w%h%m%r          " Options
 set statusline +=\[%{&ff}/%Y]      " filetype
 set statusline +=\ [%{hostname()}] " hostname
 set statusline +=\ [%{getcwd()}]   " current dir
+set statusline +=\ %<%f\           " Filename
 set statusline +=*%=%5l%*          " current line
 set statusline +=*/%LL%*           " total lines
 set statusline +=*%4vC\ %*         " virtual column number
