@@ -12,7 +12,7 @@ hi Cursor         ctermbg = 15  ctermfg = 25233
 hi Debug          ctermbg = 233 ctermfg = 250
 hi Define         ctermbg = 233 ctermfg = 15
 hi Delimiter      ctermbg = 233 ctermfg = 250
-"hi DiffAdd       ctermbg =     ctermfg = cterm    = NONE
+"hi DiffAdd       ctermbg = ctermfg     = cterm     = NONE
 hi DiffChange     ctermbg = 15  ctermfg = 59
 hi DiffDelete     ctermbg = 233 ctermfg = 59
 hi DiffText       ctermbg = 9   ctermfg = 15
@@ -20,7 +20,7 @@ hi Directory      ctermbg = 233 ctermfg = 15
 hi Error          ctermbg = 9   ctermfg = 15
 hi ErrorMsg       ctermbg = 9   ctermfg = 15
 hi Exception      ctermbg = 233 ctermfg = 250
-hi Float          ctermbg = 233 ctermfg = 9  cterm = NONE
+hi Float          ctermbg = 233 ctermfg = 9   cterm = NONE
 hi FoldColumn     ctermbg = 233 ctermfg = 250
 hi Folded         ctermbg = 233 ctermfg = 9
 hi Function       ctermbg = 233 ctermfg = 15
@@ -34,7 +34,7 @@ hi Macro          ctermbg = 233 ctermfg = 250
 hi ModeMsg        ctermbg = 233 ctermfg = 250
 hi MoreMsg        ctermbg = 233 ctermfg = 250
 hi NonText        ctermbg = 233 ctermfg = 59
-hi Number         ctermbg = 233 ctermfg = 9 cterm  = NONE
+hi Number         ctermbg = 233 ctermfg = 9 cterm   = NONE
 hi Operator       ctermbg = 233 ctermfg = 15
 hi PreCondit      ctermbg = 233 ctermfg = 15
 hi PreProc        ctermbg = 233 ctermfg = 15
@@ -56,8 +56,7 @@ hi Title          ctermbg = 233 ctermfg = 250
 hi Todo           ctermbg = 233 ctermfg = 15
 hi Typedef        ctermbg = 233 ctermfg = 15
 hi Type           ctermbg = 233 ctermfg = 15
-"hi VertSplit     ctermbg = 233 ctermfg = 250
-hi VertSplit      ctermbg = 233 ctermfg = 59 cterm = NONE
+hi VertSplit      ctermbg = 233 ctermfg = 250
 hi Visual         ctermbg = 59  ctermfg = 233
 hi VisualNOS      ctermbg = 233 ctermfg = 250
 hi WarningMsg     ctermbg = 233 ctermfg = 9
