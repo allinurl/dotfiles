@@ -61,7 +61,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 nnoremap <leader>i :set list!<cr>
 
 " Toggle show/hide numbers
-nnoremap <leader>n :set num!<cr>
+nnoremap <leader>n :set nu!<cr>
 
 " Toggle and untoggle spell checking
 map <leader>s :setlocal spell!<cr>
