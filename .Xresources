@@ -10,5 +10,5 @@ xterm*font: terminus-9
 xterm*foreground: white
 xterm*loginshell: true
 xterm*saveLines: 2048
-!xterm*visualBell: true
 xterm*bellIsUrgent: true
+!xterm*visualBell: true
