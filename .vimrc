@@ -68,6 +68,9 @@ nnoremap <leader>n :set nu!<cr>
 map <leader>s :setlocal spell!<cr>
 map <leader>s? z=
 
+" Search word under the cursor
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
 "folding settings
 set foldenable   " enable folding
 set foldmethod=indent   "fold based on indent
