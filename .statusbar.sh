@@ -4,22 +4,22 @@
 
 dte(){
   dte="$(date +"%a %b %d %Y, %H:%M:%S")"
-  echo -e "\x02 \x01$dte"
+  echo -e "$dte"
 }
 
 bat(){
   perc="$(awk 'NR==1 {print +$4}' <(acpi -V))"
   online="$(grep "on-line" <(acpi -V))"
   if [ -z "$online" ] && [ "$perc" -gt "50" ]; then
-    echo -e "\x02 \x01$perc%"
+    echo -e "$perc%"
     elif [ -z "$online" ] && [ "$perc" -le "49" ]; then
-    echo -e "\x02 \x01$perc%"
+    echo -e "$perc%"
     elif [ -z "$online" ] && [ "$perc" -le "15" ]; then
-    echo -e "\x03 $perc%"
+    echo -e "$perc%"
     elif [ -z "$online" ] && [ "$perc" -le "5" ]; then
-    echo -e "\x03 $perc%"
+    echo -e "$perc%"
   else
-    echo -e "\x02 \x01$perc%"
+    echo -e "$perc%"
   fi
 }
 
@@ -28,9 +28,9 @@ vol(){
   if [ $mute == "[on]" ]
   then
     vol=`amixer get Master | grep -m 1 -o '[0-9][0-9]*%'`
-    echo -e "\x02 \x01$vol"
+    echo -e "$vol"
   else
-    echo -e "\x02   "
+    echo -e ""
   fi
 }
 
@@ -38,20 +38,20 @@ net(){
   essid=`iwgetid | awk -F ':' '{print $2}' | sed -e 's/"//g'`
   signal=`awk '/wlp2s0:/ {print $3}' /proc/net/wireless |sed -e 's/\.//g'`
   perc=`echo $[$signal *100 /70]`
-  echo -e "\x02 \x01$essid $perc"
+  echo -e "$essid $perc"
 }
 
 disk(){
   #diskinfo=`df -h | awk '/^\/dev\//{print $6 "=" $3 "/" $2}'`
   #root=`df -h | grep rootfs | awk '{print $3"/"$2":"$5}'`
-  root=`df -h | grep \/dev\/sda6 | awk '{print $3}'`
+  root=`df -h | grep \/dev\/sda3 | awk '{print $3}'`
   #windows=`df -h | grep media | awk '{print $3"/"$2":"$5}'`
-  echo -e "\x02 \x01$root"
+  echo -e "$root"
 }
 
 mem(){
-  mem=`free | awk '/Mem/ {printf "%d MB/%d MB\n", $3 / 1024.0, $2 / 1024.0 }'`
-  echo -e "\x02 \x01$mem"
+  mem=`free | awk '/Mem/ {printf "%d MiB/%d MiB\n", $3 / 1024.0, $2 / 1024.0 }'`
+  echo -e "$mem"
 }
 
 cpu(){
@@ -62,16 +62,16 @@ cpu(){
   total=$((a+b+c+idle))
   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
   temp=`acpi -t | awk '/Thermal 0/ {printf("%d", $4)}'`
-  echo -e "\x02 \x01$cpu% \x02 \x01$temp°C"
+  echo -e "$cpu% | $temp°C"
 }
 
 backlight(){
   backlight=`xbacklight | awk '{printf("%d\n",$1 + 0.5)}'`
-  echo -e "\x02 \x01$backlight%"
+  echo -e "$backlight%"
 }
 
 # Pipe to status bar
 while true ; do
-  xsetroot -name "$(cpu) $(mem) $(disk) $(net) $(vol) $(bat) $(backlight) $(dte)"
+  xsetroot -name "$(cpu) | $(mem) | $(disk) | $(net) | $(vol) | $(bat) | $(backlight) | $(dte)"
   sleep 1s
 done &
