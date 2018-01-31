@@ -2,7 +2,7 @@ syntax on
 set nocompatible                " Use vim defaults
 set ls=2                        " Always show status line
 
-set tabstop=2
+set tabstop=2 " how many columns a tab counts for
 set shiftwidth=2
 set expandtab
 
