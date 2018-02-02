@@ -3,7 +3,7 @@ set nocompatible                " Use vim defaults
 set ls=2                        " Always show status line
 
 set tabstop=2                   " how many columns a tab counts for
-set shiftwidth=2
+set shiftwidth=2                " # indented columns with the reindent operations
 set expandtab
 
 set hlsearch                    " Highlight searches
