@@ -4,7 +4,7 @@ set ls=2                        " Always show status line
 
 set tabstop=2                   " # columns a tab counts for
 set shiftwidth=2                " # indented columns with the reindent operations
-set expandtab
+set expandtab                   " hitting Tab inserts X number of spaces.
 
 set hlsearch                    " Highlight searches
 set incsearch                   " Do incremental searching
