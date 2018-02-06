@@ -2,8 +2,8 @@ syntax on
 set nocompatible                " Use vim defaults
 set ls=2                        " Always show status line
 
-set tabstop=2                   " Number columns a tab counts for
-set shiftwidth=2                " Number indented columns with the reindent operations
+set tabstop=2                   " Number of columns a tab counts for
+set shiftwidth=2                " Number of indented columns with reindent operations
 set expandtab                   " Hitting Tab inserts X number of spaces.
 
 set hlsearch                    " Highlight searches
