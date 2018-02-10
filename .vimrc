@@ -181,9 +181,9 @@ function! MyTabLine()
     let s .= (i == t ? '%1*' : '%2*')
     let s .= ' '
     let wn = tabpagewinnr(i,'$')
-
     let s .= '%#TabNum#'
     let s .= i
+
     " let s .= '%*'
     let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
     let bufnr = buflist[winnr - 1]
