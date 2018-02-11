@@ -169,6 +169,7 @@ endfun
 
 " Show tab index in the tabline
 if exists("+showtabline")
+
 function! MyTabLine()
   let s = ''
   let wn = ''
@@ -206,6 +207,7 @@ function! MyTabLine()
   let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
   return s
 endfunction
+
 set stal=2
 set tabline=%!MyTabLine()
 set showtabline=1
