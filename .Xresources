@@ -3,14 +3,14 @@
 ! after changing contents, run xrdb -merge .Xresources
 
 xterm*background   : grey11
+xterm*bellIsUrgent : true
 xterm*boldMode     : false
 xterm*charClass    : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-xterm*font         : -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 xterm*boldFont     : -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
+xterm*font         : -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 xterm*foreground   : white
 xterm*loginshell   : true
 xterm*saveLines    : 2048
-xterm*bellIsUrgent : true
 !xterm*font: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 !xterm*visualBell: true
 
