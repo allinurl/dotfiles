@@ -14,10 +14,10 @@ xterm*saveLines    : 2048
 !xterm*font: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 !xterm*visualBell: true
 
-xscreensaver.Dialog.headingFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.headingFont : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont    : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont   : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont   : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont  : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont    : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont  : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
