@@ -209,7 +209,7 @@ function! MyTabLine()
 endfunction
 
 set stal=2
-set tabline=%!MyTabLine()
+" set tabline=%!MyTabLine()
 set showtabline=1
 highlight link TabNum Special
 endif
