@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# use dmenu to choose what to unmount
+
+# $1 = msg
+dmenu_notify() {
+	: | dmenu -p "$1 (press enter)"
+}
+
+if [[ $EUID != 0 ]]; then
+	dmenu_notify "Please run it as root"
+	exit 1
+fi
+
+dir="$(awk '$2 ~ /^\/media\// {print $2}' /etc/mtab | cut -d / -f 3 | dmenu -p "Select media device to remove")"
+dir=$(printf %b $(echo $dir | sed -r 's/(\\[0-7]{3})([0-7])/\1\\06\2/g'))
+if [[ ! "$dir" || ! -d "/media/$dir" ]]; then
+	dmenu_notify "Unable to find $dir"
+fi
+
+if umount "/media/$dir"; then
+	rmdir "/media/$dir"
+	dmenu_notify "You can now safely remove $dir"
+else
+	dmenu_notify "Some apps are using $dir"
+fi
