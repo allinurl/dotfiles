@@ -1,0 +1,3 @@
+#! /bin/bash
+# dmenu -p "$1" -fa 'Terminus:size=10' -nf '#204a87' -nb '#204a87' -sf black -sb '#babdb6' <&- && echo
+dmenu -p "Enter root Password:" -nb "#1c2023" -nf "#1c2023" -sb "#95aec7" -sf "#1c2023" <&-
