@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# use dmenu to choose what to unmount
+
+sudo -A /usr/bin/umount_dmenu | systemd-cat -t umount_device
