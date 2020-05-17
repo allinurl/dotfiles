@@ -115,6 +115,12 @@ fun! StripReply()
   execute '%s/^\W*/> /g'
 endfun
 
+" \z remove reply indent levels
+map <leader>z :call StripSpacesBetweenWords()<CR>
+fun! StripSpacesBetweenWords()
+  execute '%s/\(\S\)\s\+\(\S\)/\1 \2/g'
+endfun
+
 " \g generates the header guard
 map <leader>g :call IncludeGuard()<CR>
 fun! IncludeGuard()
