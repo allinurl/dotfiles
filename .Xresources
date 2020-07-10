@@ -12,7 +12,7 @@ xterm*foreground   : white
 xterm*loginshell   : true
 xterm*saveLines    : 2048
 !xterm*font: -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
-!xterm*visualBell: true
+xterm*visualBell: true
 *VT100*translations: #override Shift <Btn1Up>: exec-formatted("chromium '%t'", PRIMARY)
 
 xscreensaver.Dialog.headingFont : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
