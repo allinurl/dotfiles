@@ -24,8 +24,8 @@ bat(){
 }
 
 vol(){
-  mute=`amixer get Master | grep "Mono:" | awk '{print $6}'`
-  if [ $mute == "[on]" ]
+  mute=`amixer get Master | grep "t: Playback" | awk '{print $6}'`
+  if [[ "$mute" == *"[on]" ]]
   then
     vol=`amixer get Master | grep -m 1 -o '[0-9][0-9]*%'`
     echo -e "$vol"
@@ -66,7 +66,7 @@ cpu(){
 }
 
 backlight(){
-  backlight=`xbacklight | awk '{printf("%d\n",$1 + 0.5)}'`
+  backlight=`cat /sys/class/backlight/intel_backlight/brightness | awk '{printf("%d\n",$1 + 0.5)}'`
   echo -e "$backlight%"
 }
 
