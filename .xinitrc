@@ -26,7 +26,7 @@ xset +fp /usr/share/fonts/local &
 fc-cache -fv
 xset fp rehash &
 # PC dependant
-# xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 50 60 256
+# xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 sh ~/.fehbg &
 
 exec /usr/local/bin/dwm
