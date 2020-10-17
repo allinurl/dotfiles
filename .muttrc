@@ -8,6 +8,9 @@ set smtp_url          = "smtp://###@gmail.com@smtp.gmail.com:587/"
 set postponed         = "+[Gmail]/Drafts"
 set spoolfile         = "+INBOX"
 
+macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/account.example<enter><change-folder>!<enter>'
+macro index <f6> '<sync-mailbox><enter-command>source ~/.mutt/account.otherdomain<enter><change-folder>!<enter>'
+
 # General
 set move              = no  # Stop asking to "move read messages to mbox"!
 set imap_keepalive    = 300
