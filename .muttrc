@@ -8,6 +8,9 @@ set smtp_url          = "smtp://###@gmail.com@smtp.gmail.com:587/"
 set postponed         = "+[Gmail]/Drafts"
 set spoolfile         = "+INBOX"
 
+# switch to default account on startup
+source ~/.mutt/account.example
+
 macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/account.example<enter><change-folder>!<enter>'
 macro index <f6> '<sync-mailbox><enter-command>source ~/.mutt/account.otherdomain<enter><change-folder>!<enter>'
 
