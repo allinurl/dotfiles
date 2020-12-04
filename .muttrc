@@ -11,6 +11,7 @@ set spoolfile         = "+INBOX"
 # switch to default account on startup
 source ~/.mutt/account.example
 
+# actual switching
 macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/account.example<enter><change-folder>!<enter>'
 macro index <f6> '<sync-mailbox><enter-command>source ~/.mutt/account.otherdomain<enter><change-folder>!<enter>'
 
