@@ -115,7 +115,7 @@ fun! StripReply()
   execute '%s/^\W*/> /g'
 endfun
 
-" \z remove spaces between words 
+" \z remove spaces between words
 map <leader>z :call StripSpacesBetweenWords()<CR>
 fun! StripSpacesBetweenWords()
   execute '%s/\(\S\)\s\+\(\S\)/\1 \2/g'
