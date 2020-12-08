@@ -222,3 +222,4 @@ endif
 
 " Indentation
 autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini,*.css,*.mustache set noexpandtab shiftwidth=4 tabstop=4
+autocmd BufRead,BufNewFile *.volt,*.html,*.htm set filetype=html 
