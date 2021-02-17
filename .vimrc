@@ -18,7 +18,7 @@ set scrolloff=3                 " Keep 3 lines when scrolling
 set shortmess+=I                " Hide the launch screen
 set showcmd                     " Display incomplete commands
 set showmode                    " Always show what mode we're currently editing in
-set tabpagemax=50
+set tabpagemax=100
 set title                       " Make your xterm inherit the title from Vim
 set ttyfast                     " Don't lag…
 set visualbell t_vb=            " Turn off error beep/flash
