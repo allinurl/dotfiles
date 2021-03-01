@@ -16,14 +16,14 @@ macro index <f5> '<sync-mailbox><enter-command>source ~/.mutt/account.example<en
 macro index <f6> '<sync-mailbox><enter-command>source ~/.mutt/account.otherdomain<enter><change-folder>!<enter>'
 
 # General
-set move              = no  # Stop asking to "move read messages to mbox"!
+set header_cache      = ~/.cache/mutt
 set imap_keepalive    = 300
 set mail_check        = 60  # mutt checks for new mails on every keystroke but not more often than once in 5 seconds
-set timeout           = 10  # mutt 'presses' (like) a key for you (while you're idle)  each x sec to trigger the thing below
-set header_cache      = ~/.cache/mutt
 set mark_old          = no
-set net_inc           = 5 # Display download progress every 5K 
+set move              = no  # Stop asking to "move read messages to mbox"!
+set net_inc           = 5 # Display download progress every 5K
 set quit              = ask-yes
+set timeout           = 10  # mutt 'presses' (like) a key for you (while you're idle)  each x sec to trigger the thing below
 unset imap_passive
 unset resolve
 
