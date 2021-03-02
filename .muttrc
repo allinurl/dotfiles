@@ -29,10 +29,10 @@ unset resolve
 
 # Looks
 set markers           = no # don't put '+' at the beginning of wrapped lines
-set pager_index_lines = 5 # how large is the index window?
-set sort              = 'reverse-threads'
-set sort_aux          = 'last-date-received'
 set pager_index_lines = 10
+set pager_index_lines = 5 # how large is the index window?
+set sort_aux          = 'last-date-received'
+set sort              = 'reverse-threads'
 # set arrow_cursor    = yes
 
 # Editor
