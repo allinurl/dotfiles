@@ -82,14 +82,14 @@ color tilde      color245  default
 mono  indicator  reverse
 
 # Index
-color tree       color213  default                  # arrow in threads
-color index      color222  default  "~A"            # message to myself
-color index      color220  default  "~N"            # message to myself
 color index      color110  default  "~T"            # message to myself
-color index      color167  default  "~="            # message to myself
-color index      color235  default  "~D(!~p|~p)"    # deleted
-color index      color167  default  '~s goaccess'
 color index      color161  default  '~N~s goaccess'
+color index      color167  default  "~="            # message to myself
+color index      color167  default  '~s goaccess'
+color index      color220  default  "~N"            # message to myself
+color index      color222  default  "~A"            # message to myself
+color index      color235  default  "~D(!~p|~p)"    # deleted
+color tree       color213  default                  # arrow in threads
 
 # Header
 color header     color110  default  "^From"
