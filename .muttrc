@@ -93,9 +93,9 @@ color tree       color213  default                  # arrow in threads
 
 # Header
 color header     color110  default  "^From"
+color header     color143  default  "^(To|Reply-To|Cc|Bcc):"
 color header     color167  default  "^Date"
 color header     color173  default  "^(Subject)"
-color header     color143  default  "^(To|Reply-To|Cc|Bcc):"
 color header     color245  default  "^(X-Original-To):"
 color header     color96   default  "^(User-Agent|X-Editor|X-Mailer):"
 color header     cyan      default  "^Organization:"
