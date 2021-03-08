@@ -101,12 +101,12 @@ color header     color96   default  "^(User-Agent|X-Editor|X-Mailer):"
 color header     cyan      default  "^Organization:"
 
 # Body
-color quoted     color110  default
 color quoted1    color167  default
 color quoted2    color173  default
 color quoted3    color143  default
 color quoted4    color221  default
 color quoted5    color109  default
+color quoted     color110  default
 
 color signature  color238  default
 color bold       green     default
