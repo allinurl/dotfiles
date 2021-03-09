@@ -108,23 +108,23 @@ color quoted4    color221  default
 color quoted5    color109  default
 color quoted     color110  default
 
-color signature  color238  default
-color bold       green     default
-color underline  color208  default
-color normal     color250  default
+color body       brightred default  "(BAD signature)"
+color body       brightred default  "mailto: *[^ ]+\(\\?subject=[^ ]+\)?"
 color body       color109  default  "(finger|ftp|http|news|telnet)://[^ >]*"
+color body       color178  default  "[ ]?[*][^*]*[*][ ]"
+color body       color178  default  "[ ][*][^*]*[*][ ]?"
+color body       color178  default  "[;:][)(|]"
+color body       color178  default  "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+color body       color178  default  "[;:][-o][)/(|]"
+color body       color208  default  "(heipei|hackvalue|Jojo|Gilger|Johannes)"
 color body       color39   default  "<URL:[^ ]*>"
 color body       cyan      default  "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
 color body       green     default  "[[:alnum:]][-+.#_[:alnum:]]*@[-+.[:alnum:]]*[[:alnum:]]"
-color body       brightred default  "mailto: *[^ ]+\(\\?subject=[^ ]+\)?"
-color body       color178  default  "[;:][-o][)/(|]"
-color body       color178  default  "[;:][)(|]"
-color body       color178  default  "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
-color body       color178  default  "[ ][*][^*]*[*][ ]?"
-color body       color178  default  "[ ]?[*][^*]*[*][ ]"
-color body       brightred default  "(BAD signature)"
 color body       green     default  "(Good signature)"
-color body       color208  default  "(heipei|hackvalue|Jojo|Gilger|Johannes)"
+color bold       green     default
+color normal     color250  default
+color signature  color238  default
+color underline  color208  default
 
 color hdrdefault color218  default
 color body       color128  default  '[-.+\w]+@[-.\w]+[^.]' # e-mail addresses
