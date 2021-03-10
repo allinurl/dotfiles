@@ -126,6 +126,6 @@ color normal     color250  default
 color signature  color238  default
 color underline  color208  default
 
-color hdrdefault color218  default
 color body       color128  default  '[-.+\w]+@[-.\w]+[^.]' # e-mail addresses
+color hdrdefault color218  default
 color underline  brightgreen default
