@@ -19,14 +19,16 @@ xmodmap -e "remove mod4 = Super_L"
 xmodmap -e "add mod1 = Super_L"
 
 ~/.statusbar.sh
-xrdb -merge ~/.Xresources 
+xrdb -merge ~/.Xresources
 xscreensaver -no-splash &
 xset +fp ~/.fonts
 xset +fp /usr/share/fonts/local &
 fc-cache -fv
 xset fp rehash &
+
 # PC dependant
 # xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+
 sh ~/.fehbg &
 
 exec /usr/local/bin/dwm
