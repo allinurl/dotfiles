@@ -15,8 +15,9 @@ if [ -f "/usr/bin/dpass" ] ; then
 	export SUDO_ASKPASS="/usr/bin/dpass"
 fi
 
-xmodmap -e "remove mod4 = Super_L"
-xmodmap -e "add mod1 = Super_L"
+# these conflict with tabbed so disable for now
+#xmodmap -e "remove mod4 = Super_L"
+#xmodmap -e "add mod1 = Super_L"
 
 ~/.statusbar.sh
 xrdb -merge ~/.Xresources
