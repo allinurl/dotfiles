@@ -1,8 +1,8 @@
 syntax on
 set nocompatible                " Use vim defaults
-set ls=2                        " Always show status line
 
 set expandtab                   " Hitting Tab inserts X number of spaces.
+set ls=2                        " Always show status line
 set shiftwidth=2                " Number of indented columns with reindent operations
 set tabstop=2                   " Number of columns a tab counts for
 
