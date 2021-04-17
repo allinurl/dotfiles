@@ -1,6 +1,7 @@
 ! this are Xresources to make xterm look good
 ! put into ~/.Xresources
-! after changing contents, run xrdb -merge .Xresources
+! after changing contents, run:
+! xrdb -merge .Xresources
 
 xterm*background   : grey11
 xterm*bellIsUrgent : true
