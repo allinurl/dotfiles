@@ -223,3 +223,10 @@ endif
 " Custom Indentation
 autocmd BufRead,BufNewFile *.php,*.js,*.volt,*.html,*.htm,*.ini,*.css,*.mustache set noexpandtab shiftwidth=4 tabstop=4
 autocmd BufRead,BufNewFile *.volt,*.html,*.htm set filetype=html 
+
+" Switch to last-active tab
+if !exists('g:lasttab')
+  let g:lasttab = 1
+endif
+nmap <Leader>gl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
