@@ -29,4 +29,4 @@ set_prompt_style () {
 set_prompt_style
 
 export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=626
+export HISTSIZE=627
