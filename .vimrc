@@ -25,6 +25,7 @@ set ttyfast                     " Don't lag…
 set visualbell t_vb=            " Turn off error beep/flash
 set wildmenu                    " Enhanced tab-completion shows all matching cmds in a popup menu
 set wildmode=list:longest,full  " full completion options
+set backspace=indent,eol,start
 
 let g:loaded_matchparen= 1
 set t_Co=256
