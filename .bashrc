@@ -28,5 +28,19 @@ set_prompt_style () {
 
 set_prompt_style
 
+# Function to display 256 colors in a 16x16 grid
+function show_colors() {
+    for row in {0..15}; do
+        for col in {0..15}; do
+            color=$((row * 16 + col))  # Calculate color index
+            printf "\e[48;5;%sm%3d \e[0m " "$color" "$color"  # Print color number centered
+        done
+        echo  # New line for next row
+    done
+}
+
+# Shortcut alias to display colors quickly
+alias colors="show_colors"
+
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1730
