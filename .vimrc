@@ -30,6 +30,7 @@ set backspace=indent,eol,start
 let g:loaded_matchparen= 1
 set t_Co=256
 colorscheme 256_redblack
+set notermguicolors
 
 " CTRL+P
 " cd ~/.vim; git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
