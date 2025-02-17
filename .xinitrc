@@ -26,6 +26,7 @@ xset +fp ~/.fonts
 xset +fp /usr/share/fonts/local &
 fc-cache -fv
 xset fp rehash &
+setxkbmap -option compose:ralt
 
 # PC dependant
 # xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
