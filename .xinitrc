@@ -15,7 +15,6 @@ if [ -f "/usr/bin/dpass" ] ; then
 	export SUDO_ASKPASS="/usr/bin/dpass"
 fi
 
-# these conflict with tabbed so disable for now
 #xmodmap -e "remove mod4 = Super_L"
 #xmodmap -e "add mod1 = Super_L"
 
@@ -29,7 +28,7 @@ xset fp rehash &
 setxkbmap -option compose:ralt
 
 # PC dependant
-# xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+xinput set-prop "ELAN0902:00 04F3:3051 Touchpad" "libinput Tapping Enabled" 1
 
 sh ~/.fehbg &
 
