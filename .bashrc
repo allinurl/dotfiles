@@ -24,6 +24,7 @@ fi
 
 set_prompt_style () {
 	PS1="\[$(tput bold)\]\[$(tput setaf 0)\]\t \[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 1)\]\\$ \[$(tput sgr0)\]"
+  #PS1='\d\n\w:\\$ '
 }
 
 set_prompt_style
