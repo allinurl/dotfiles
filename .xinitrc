@@ -20,7 +20,6 @@ fi
 
 ~/.statusbar.sh
 xrdb -merge ~/.Xresources
-xscreensaver -no-splash &
 xset +fp ~/.fonts
 xset +fp /usr/share/fonts/local &
 fc-cache -fv
@@ -29,6 +28,9 @@ setxkbmap -option compose:ralt
 
 # PC dependant
 xinput set-prop "ELAN0902:00 04F3:3051 Touchpad" "libinput Tapping Enabled" 1
+
+# lock session
+xautolock -time 10 -locker "sh -c 'xlock -mode blank & sleep 1; xset dpms force off'" &
 
 sh ~/.fehbg &
 
