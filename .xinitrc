@@ -18,6 +18,7 @@ fi
 #xmodmap -e "remove mod4 = Super_L"
 #xmodmap -e "add mod1 = Super_L"
 
+dunst &
 ~/.statusbar.sh
 xrdb -merge ~/.Xresources
 xset +fp ~/.fonts

@@ -14,6 +14,11 @@ xterm*foreground   : white
 xterm*loginshell   : true
 xterm*saveLines    : 2048
 xterm*visualBell: true
+
+xterm*VT100.translations: #override \
+    Shift <Key>Delete: insert-selection(PRIMARY) \n\
+    Ctrl Shift <Key>Left: string(0x1b) string("[1~") \n\
+    Ctrl Shift <Key>Right: string(0x1b) string("[4~")
 !*VT100*translations: #override Shift <Btn1Up>: exec-formatted("chromium '%t'", PRIMARY)
 
 xscreensaver.Dialog.bodyFont    : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
@@ -23,3 +28,6 @@ xscreensaver.Dialog.headingFont : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-
 xscreensaver.Dialog.labelFont   : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 xscreensaver.Dialog.unameFont   : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 xscreensaver.passwd.passwdFont  : -xos4-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+
+XLock.fontset: 				-xos4-terminus-medium-r-normal--0-0-72-72-c-0-iso8859-1
+XLock.planfontset: 			-xos4-terminus-medium-r-normal--0-0-72-72-c-0-iso8859-1
