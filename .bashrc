@@ -45,4 +45,4 @@ alias colors="show_colors"
 
 source /etc/profile.d/debuginfod.sh
 export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=2065
+export HISTSIZE=2066
