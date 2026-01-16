@@ -27,16 +27,16 @@ fc-cache -fv
 xset fp rehash &
 setxkbmap -option compose:ralt
 xmodmap -e "keycode 201 = Insert"
-
-# PC dependant
-#xinput set-prop "ELAN0902:00 04F3:3051 Touchpad" "libinput Tapping Enabled" 1
-xinput set-prop "ELAN010A:00 04F3:32F0 Touchpad" "libinput Tapping Enabled" 1
-
-# lock session
+#
+## PC dependant
+##xinput set-prop "ELAN0902:00 04F3:3051 Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "ELAN0131:00 04F3:32F0 Touchpad" "libinput Tapping Enabled" 1
+#
+## lock session
 xautolock -time 10 -locker "sh -c 'LANG=C LC_ALL=C xlock -mode blank & sleep 1; xset dpms force off'" &
-
+#
 sh ~/.fehbg &
-
+#
 exec /usr/local/bin/dwm
 
 # exec gnome-session
